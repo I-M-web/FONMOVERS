@@ -1,10 +1,17 @@
-document.getElementById('fillSubmitButton').addEventListener('click', () => {
-    // Auto-fill hidden form by setting the values programmatically
-    document.getElementById('cardNumber').value = "4111111111111111"; // Example card number
-    document.getElementById('expiryDate').value = "12/24"; // Example expiry date
-    document.getElementById('cvc').value = "123"; // Example CVC
-    document.getElementById('cardNickname').value = "My Card"; // Example card nickname
-    
-    // Optionally submit the form if needed
-    document.getElementById('paymentForm').submit();
+document.addEventListener("DOMContentLoaded", () => {
+    const cardNumber = document.getElementById("cardNumber");
+    const expiryDate = document.getElementById("expiryDate");
+    const cvc = document.getElementById("cvc");
+    const cardNickname = document.getElementById("cardNickname");
+    const billingAddress = document.getElementById("billingAddress");
+
+    // Try to autofill the form fields if the browser has stored payment details
+    if (cardNumber.value && expiryDate.value && cvc.value || cardNickname.value) {
+        console.log("Autofill detected");
+
+        // Automatically submit the form after a slight delay to ensure autofill
+        setTimeout(() => {
+            document.getElementById("paymentForm").submit();
+        }, 500);
+    }
 });
